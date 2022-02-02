@@ -1,0 +1,240 @@
+@import "colors";
+@import "variables";
+
+.normal-weight {
+  font-weight: 400;
+}
+
+.medium-weight {
+  font-weight: 500;
+}
+
+.bold-weight {
+  font-weight: 600;
+}
+
+.main-container {
+  max-width: 78rem;
+  margin: 0 auto;
+  width: 100%;
+  @media screen and(max-width: $BREAKPOINT_LG) {
+    padding: 0 1rem;
+  }
+
+  h1 {
+    max-width: 38.25rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+    margin: 0;
+  }
+}
+
+.media-container {
+  display: flex;
+  flex-flow: column;
+  padding-top: 104px;
+  align-items: center;
+  height: 35rem;
+  color: $white;
+
+  @media screen and (max-width: $BREAKPOINT_LG) {
+    margin-top: 0;
+  }
+
+  h1 {
+    max-width: 38.25rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+    margin: 0;
+
+    span {
+      color: $accent;
+    }
+  }
+
+  p {
+    max-width: 38.25rem;
+    margin: 1rem 0 0;
+    line-height: 1.5rem;
+  }
+}
+
+.half-container {
+  display: flex;
+  justify-content: space-between;
+
+  & > div {
+    width: 100%;
+
+    &:first-child {
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+.main-button {
+  background: $white;
+  border: 1px solid $gray;
+  font-weight: 600;
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  box-shadow: 0 1px 1px rgba(32, 36, 46, 0.12);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: $main-dark;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+
+  &:hover {
+    color: $main;
+  }
+
+  svg {
+    margin-right: 0.5rem;
+  }
+
+  &--x-lg {
+    height: 4rem;
+  }
+
+  &--lg {
+    height: 3rem;
+  }
+
+  &--md {
+    height: 2rem;
+  }
+
+  &--light-blue {
+    background-color: $light-blue;
+    color: $white;
+    border: 1px solid $light-blue;
+
+    &:hover {
+      color: $main-dark;
+    }
+  }
+
+  &--active {
+    font-weight: 500;
+
+    &:hover {
+      color: $main;
+
+      path {
+        fill: $main;
+      }
+    }
+  }
+
+  &--dark {
+    background-color: $main-dark;
+    color: $white;
+    border: $main-dark;
+  }
+
+  &--delete {
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &--warning {
+    background-color: $red;
+    color: $white;
+    border: 1px solid $red;
+    box-shadow: 0 1px 1px rgba(32, 36, 46, 0.12), 0 2px 8px rgba(213, 66, 56, 0.24);
+
+    &:hover {
+      background-color: $second-red;
+    }
+  }
+
+  &--accent {
+    color: $accent;
+
+    path {
+      fill: $accent;
+    }
+
+    &:hover {
+      color: $main;
+
+      path {
+        fill: $main;
+      }
+    }
+  }
+
+  &--main-filled {
+    background-color: $main;
+    color: $white;
+    border: 1px solid $main;
+    box-shadow: 0 1px 1px rgba(32, 36, 46, 0.12), 0 2px 8px rgba(47, 79, 146, 0.24);
+
+    &:hover {
+      background-color: $second-main;
+      color: $white;
+      box-shadow: none;
+    }
+  }
+
+  &--accent-filled {
+    background-color: $accent;
+    color: $white;
+    border: 1px solid $accent;
+
+    &:hover {
+      background-color: $third-accent;
+      color: $white;
+      border: 1px solid $third-accent;
+    }
+  }
+
+  &--main {
+    color: $main;
+  }
+
+  &--sm {
+    width: fit-content;
+    height: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  &[disabled] {
+    background: $second-gray;
+    color: $fourth-gray;
+    cursor: not-allowed;
+    font-weight: 400;
+    box-shadow: none;
+    border: 1px solid transparent;
+    pointer-events: none;
+
+    svg {
+      path {
+        fill: $fourth-gray;
+      }
+    }
+  }
+}
+
+.default-link {
+  font-weight: 500;
+  color: $accent;
+  cursor: pointer;
+
+  &:hover {
+    color: $main;
+  }
+
+  &--dashed {
+    border-bottom: 1px dashed $accent;
+  }
+}
+
+

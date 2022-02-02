@@ -1,0 +1,19 @@
+@import "~src/styles/colors";
+
+.main-container {
+  background-color: #E6EAF2;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 150px 150px 150px 150px;
+  grid-gap: 2rem 5rem;
+}
+
+.color-box {
+  display: block;
+  height: 5rem;
+  width: 10rem;
+}
